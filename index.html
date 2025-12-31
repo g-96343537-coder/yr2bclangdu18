@@ -7,7 +7,7 @@
   <script src="https://accounts.google.com/gsi/client" async defer></script>
   <style>
     :root{ 
-        --bg: #ecfeff; /* 淡青色背景 */
+        --bg: #ecfeff; /* 备用背景色 */
         --card: #ffffff; 
         --accent: #0891b2; /* 智慧蓝/青色强调色 */
         --accent-dark: #155e75;
@@ -22,7 +22,15 @@
         margin: 0;
         font-family: "PingFang SC", "Microsoft YaHei", "Nunito", sans-serif;
         background-color: var(--bg);
-        background-image: radial-gradient(circle at 10% 20%, rgb(207, 250, 254) 0%, rgb(236, 254, 255) 90%);
+        
+        /* --- 修改处：设置背景图 --- */
+        background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/05/Cartoon-background-photos.jpg');
+        background-size: cover;       /* 铺满整个屏幕 */
+        background-position: center;  /* 居中显示 */
+        background-attachment: fixed; /* 背景固定，不随滚动条滚动 */
+        background-repeat: no-repeat; /* 不重复 */
+        /* ----------------------- */
+
         color: var(--text-main);
         height: 100vh;
         overflow-x: hidden;
@@ -286,10 +294,10 @@
   </style>
 
   <script>
-    // Web App URL (GAS)
-    const GAS_URL = "https://script.google.com/macros/s/AKfycbxmYyVnw2QR0eH-IlwkPmu2zhFlz8zy39fZy721l7Hw0jsDFVdDrLg2XU4GGwAkQpIz/exec";
+    // Web App URL (GAS) - 修改处：已更新
+    const GAS_URL = "https://script.google.com/macros/s/AKfycbwwqwbuKRIRwytz-_8tRBUEbFMP2TFdgH6WxOXtpFnGTAy9MITThMAeNKgFmqKMwkAyQA/exec";
     
-    // ⚠️ 课文内容：聪明的司马光 (已替换)
+    // ⚠️ 课文内容：聪明的司马光
     const sentences = [
       "庭院里，假山旁，许多孩子捉迷藏。忽然间，一声响，有人跌进大水缸。",
       "跳不起，爬不上，缸外朋友多慌张。逃的逃，喊的喊，缸里孩子怎么办？",
@@ -439,4 +447,5 @@
     };
   </script>
 </body>
+
 </html>
